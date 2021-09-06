@@ -1,10 +1,12 @@
 class BlogsController < ApplicationController
-  def index
-  end
 
   def show
   end
 
+  def index
+    @blogs = Blog.all
+  end
+  
   def new
     @blog = Blog.new
   end
@@ -17,6 +19,7 @@ class BlogsController < ApplicationController
 
   def edit
   end
+
 
   private
   def blog_params
